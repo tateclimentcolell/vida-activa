@@ -1,23 +1,23 @@
 // LES TEVES 14 IMATGES amb les seves parelles
 const cartes = [
-  { imatge: "imatges/01.png", parella: 1 },
-  { imatge: "imatges/02.png", parella: 1 },
-  { imatge: "imatges/03.png", parella: 2 },
-  { imatge: "imatges/04.png", parella: 2 },
-  { imatge: "imatges/05.png", parella: 3 },
-  { imatge: "imatges/06.png", parella: 3 },
-  { imatge: "imatges/07.png", parella: 4 },
-  { imatge: "imatges/08.png", parella: 4 },
-  { imatge: "imatges/09.png", parella: 5 },
-  { imatge: "imatges/10.png", parella: 5 },
-  { imatge: "imatges/11.png", parella: 6 }, 
-  { imatge: "imatges/12.png", parella: 6 },
-  { imatge: "imatges/13.png", parella: 7 },
-  { imatge: "imatges/14.png", parella: 7 }
+  { imatge: "Imatges/01.png", parella: 1 },
+  { imatge: "Imatges/02.png", parella: 1 },
+  { imatge: "Imatges/03.png", parella: 2 },
+  { imatge: "Imatges/04.png", parella: 2 },
+  { imatge: "Imatges/05.png", parella: 3 },
+  { imatge: "Imatges/06.png", parella: 3 },
+  { imatge: "Imatges/07.png", parella: 4 },
+  { imatge: "Imatges/08.png", parella: 4 },
+  { imatge: "Imatges/09.png", parella: 5 },
+  { imatge: "Imatges/10.png", parella: 5 },
+  { imatge: "Imatges/11.png", parella: 6 }, 
+  { imatge: "Imatges/12.png", parella: 6 },
+  { imatge: "Imatges/13.png", parella: 7 },
+  { imatge: "Imatges/14.png", parella: 7 }
 ];
 
 // Carta del darrere (inici)
-const imatgeDors = "imatges/dors.png";
+const imatgeDors = "Imatges/dors.png";
 
 let cartesGirades = []; 
 let cartesEmparellades = [];
