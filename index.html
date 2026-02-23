@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Troba la parella</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Troba la parella</h1>
+  
+  <button class="boto-reiniciar" onclick="iniciarJoc()">
+    <img src="imatges/reiniciar.png" alt="Reiniciar">
+    <span>TORNAR A<br>COMENÇAR</span>
+  </button>
+  
+  <div id="tauler"></div>
+
+  <!-- Pantalla de victòria -->
+  <div class="victoria" id="victoria">
+    <button class="boto-reiniciar boto-victoria" onclick="iniciarJoc()">
+      <img src="imatges/reiniciar.png" alt="Reiniciar">
+      <span>TORNAR A<br>COMENÇAR</span>
+    </button>
+    <h2>A AMPANS millorem<br>la qualitat de vida de la persona</h2>
+    <div id="tauler-final"></div>
+  </div>
+
+  <!-- Parella trobada -->
+  <div class="overlay-parella" id="overlayParella">
+    <div class="parella-trobada">
+      <img id="cartaParella1" src="" alt="Carta 1">
+      <img id="cartaParella2" src="" alt="Carta 2">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
