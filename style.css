@@ -16,6 +16,32 @@
   font-weight: 700;
 }
 
+/* AMAGAR JOC FINS QUE COMENCI */
+body.joc-no-iniciat h1,
+body.joc-no-iniciat .boto-reiniciar,
+body.joc-no-iniciat #tauler {
+  display: none;
+}
+
+/* PANTALLA D'INICI */
+.pantalla-inici {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  background-image: url('Imatges/inici.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.pantalla-inici.amagar {
+  display: none;
+}
+
 /* COLORS I FONS */
 body {
   font-family: 'Graphik', sans-serif;
@@ -267,23 +293,4 @@ h2 {
 @keyframes scaleIn {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
-}
-
-/* PANTALLA D'INICI */
-.pantalla-inici {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2000;
-  background-image: url('Images/inici.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-
-.pantalla-inici.amagar {
-  display: none;
 }
