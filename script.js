@@ -159,11 +159,13 @@ function mostrarVictoria() {
   victoria.classList.add('mostrar');
 }
 
+
 // INICIAR JOC EN FER CLICK A LA PANTALLA
 // PANTALLA D'INICI
 const pantallaInici = document.getElementById('pantallaInici');
 
 pantallaInici.addEventListener('click', () => {
   pantallaInici.classList.add('amagar');
+  document.body.classList.remove('joc-no-iniciat');
   iniciarJoc();
 });
