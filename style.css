@@ -31,15 +31,42 @@ body.joc-no-iniciat #tauler {
   right: 0;
   bottom: 0;
   z-index: 2000;
-  background-image: url('Imatges/inici1.png');
+  background-image: url('Imatges/inici.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pantalla-inici.amagar {
   display: none;
+}
+
+.cercle-inici {
+  width: 190mm;
+  height: 190mm;
+  background: linear-gradient(145deg, #ff9a3c, #e8622a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(232, 98, 42, 0.6);
+  animation: pulsaCercle 2s ease-in-out infinite;
+}
+
+.cercle-inici img {
+  max-width: 60%;
+  max-height: 60%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes pulsaCercle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
 /* COLORS I FONS */
