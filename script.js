@@ -169,3 +169,40 @@ pantallaInici.addEventListener('click', () => {
   document.body.classList.remove('joc-no-iniciat');
   iniciarJoc();
 });
+
+// TEMPORITZADOR D'INACTIVITAT (1 minut)
+let temporizadorInactivitat;
+const TEMPS_INACTIVITAT = 60000; // 60 segons = 1 minut
+
+function reiniciarTemporizador() {
+  clearTimeout(temporizadorInactivitat);
+  temporizadorInactivitat = setTimeout(tornarAInici, TEMPS_INACTIVITAT);
+}
+
+function tornarAInici() {
+  // Mostrar pantalla d'inici
+  document.getElementById('pantallaInici').classList.remove('amagar');
+  document.body.classList.add('joc-no-iniciat');
+  
+  // Amagar pantalla de victòria si està visible
+  document.getElementById('victoria').classList.remove('mostrar');
+  
+  // Reiniciar variables del joc
+  cartesGirades = [];
+  cartesEmparellades = [];
+  bloquejat = false;
+}
+
+// Detectar activitat (clics, tocs, moviment)
+document.addEventListener('click', reiniciarTemporizador);
+document.addEventListener('touchstart', reiniciarTemporizador);
+document.addEventListener('mousemove', reiniciarTemporizador);
+
+// Iniciar el temporizador quan comenci el joc
+const pantallaIniciOriginal = pantallaInici.addEventListener;
+pantallaInici.addEventListener('click', () => {
+  pantallaInici.classList.add('amagar');
+  document.body.classList.remove('joc-no-iniciat');
+  iniciarJoc();
+  reiniciarTemporizador(); // Iniciar temporizador
+});
