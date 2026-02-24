@@ -268,3 +268,44 @@ h2 {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
+/* PANTALLA D'INICI */
+.pantalla-inici {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  background-image: url('Images/inici.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pantalla-inici.amagar {
+  display: none;
+}
+
+.inici-contingut {
+  text-align: center;
+  padding: 40px;
+}
+
+.inici-contingut p {
+  font-family: 'Graphik', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d1500;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.8);
+  animation: pulsaTexte 2s ease-in-out infinite;
+}
+
+@keyframes pulsaTexte {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
