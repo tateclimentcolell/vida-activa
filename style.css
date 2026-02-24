@@ -31,14 +31,11 @@ body.joc-no-iniciat #tauler {
   right: 0;
   bottom: 0;
   z-index: 2000;
-  background-image: url('Imatges/inici.png');
+  background-image: url('Imatges/inici1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .pantalla-inici.amagar {
@@ -46,14 +43,17 @@ body.joc-no-iniciat #tauler {
 }
 
 .cercle-inici {
-  width: 190mm;
-  height: 190mm;
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  width: 40mm;
+  height: 40mm;
   background: linear-gradient(145deg, #ff9a3c, #e8622a);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 20px 60px rgba(232, 98, 42, 0.6);
+  box-shadow: 0 20px 60px rgba(232, 98, 42, 0.3);
   animation: pulsaCercle 2s ease-in-out infinite;
 }
 
@@ -131,7 +131,7 @@ h1 {
 }
 
 /* GRAELLA DE CARTES */
-#tauler {
+#tauler { 
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 20px;
@@ -321,3 +321,4 @@ h2 {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
